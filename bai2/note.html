@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const là hằng số chỉ được khai báo 1 lần và chỉ có thể gán giá trị 1 lần duy nhất
+        // vd const a = "a"
+        // let có thể gán lại giá trị nhưng chỉ có thể khai náo 1 lần duy nhất
+        // vd let b= "a"
+        // b = "c"
+        // var có thể khai báo lại và gán lại giá trị
+        // var d = "data"
+        // var d = "data2"
+        // d= "data3"
+
+
+        // đề nối 2 mảng lại với nhau
+        // Cách 1: Sử dụng Spread Operator
+        const arr1 = [ 1, 2, 3, 5 ];
+        const arr2 = [ 2, 4, 5, 6 ];
+        // console.log([arr1,arr2]);
+        const arr3 = [ ...arr1, ...arr2 ];
+        console.log(arr3);
+
+        //cách 2
+        const arr4 = arr1.concat(arr2);
+        console.log(arr1);
+        console.log(arr4);
+
+
+        // sao chép giá trị
+        const obj1 = { a: 1, b: 2 };
+        const obj2 = { b: 3, c: 4 };
+        const obj3 = Object.assign(obj1, obj2);
+        console.log(obj1);
+        console.log("trả về :");
+        console.log(obj3); // Output: { a: 1, b: 3, c: 4 }
+
+
+        // lọc giá trị trong mảng
+        const array5 = [ 1, 2, 3, 4, 5 ];
+        const filteredArray5 = array5.filter((element) => element % 2 === 0);
+        console.log("\nFilter example:");
+        console.log(filteredArray5); // Output: [2, 4]
+
+    </script>
+</body>
+
+</html>

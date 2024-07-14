@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tính kế thừa (Inheritance)
+        // Tính kế thừa là một trong bốn tính chất cơ bản của lập trình hướng đối tượng (OOP). 
+        // Kế thừa cho phép một lớp (class) con thừa hưởng các thuộc tính và phương thức của một lớp cha
+        // (superclass hoặc base class). Điều này giúp tạo ra một cấu trúc phân cấp và tái sử dụng mã nguồn, 
+        // giảm thiểu sự trùng lặp mã và cải thiện khả năng bảo trì.
+        class DongVat {
+            constructor(loai, tuoi) {
+                this.loai = loai;
+                this.tuoi = tuoi;
+            }
+
+            an () {
+                console.log(`${ this.loai } đang ăn.`);
+            }
+        }
+
+        // chó
+        class Cho extends DongVat {
+            constructor(loai, tuoi, sochan)
+            {
+                super(loai,tuoi);
+                this._sochan = sochan
+            }
+            an () {
+                super.an();
+                console.log(`Có số chân : ${this.sochan}`);
+            }
+            sua () {
+                console.log('Gâu gâu!');
+            }
+            thongtin () {
+                console.log(`${this.loai}-tuổi: ${this.tuoi}-số chân: ${this.sochan}`);
+            }
+        }
+
+        let choCon = new Cho('Chó con', 1,4);
+        // choCon.thongtin()
+        // choCon.an();
+        // choCon.sua();
+        console.log(choCon._sochan);
+
+    </script>
+</body>
+
+</html>

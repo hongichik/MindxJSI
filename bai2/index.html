@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // nhân các phần tử trong mảng với 2
+        const array4 = [ 1, 2, 3 ];
+        const newArray4 = array4.map((element) => element * 2);
+        console.log("\nMap example:");
+        console.log(newArray4); // Output: [2, 4, 6]
+
+        const newArray5 = array4.map((element) => element % 2 === 0 ? "A" : element);
+        console.log("\n vd với giá trị chia hết cho 2 sẽ gán = A");
+        console.log(newArray5); 
+    </script>
+</body>
+
+</html>
